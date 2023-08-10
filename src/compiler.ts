@@ -50,7 +50,6 @@ export function compileCurrentFile() {
         let match;
         const diagnostics = [];
         while ((match = regex.exec(stderr)) !== null) {
-          console.log(match);
           const lineNumber = parseInt(match[1]) - 1; // Convert to 0-based index
           const columnNumber = parseInt(match[2]) - 1; // Convert to 0-based index
           const errorMessage = match[3];
@@ -69,7 +68,6 @@ export function compileCurrentFile() {
           diagnostics.push(diagnostic);
         }
         if (diagnostics.length > 0) {
-          console.log(diagnostics);
           vscode.window.showErrorMessage('Compilation failed.');
           diagnosticCollection.set(editor.document.uri, diagnostics);
         } else {
