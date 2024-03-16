@@ -1,7 +1,7 @@
 {
-  "name": "elang-compiler",
-  "displayName": "elang-compiler",
-  "description": "Elang Compiler",
+  "name": "flow-wing-code-runner",
+  "displayName": "Flow-Wing Code Runner",
+  "description": "Flow-Wing Code Runner",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.81.0"
@@ -14,11 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "elang-compiler.helloWorld",
-        "title": "Hello World"
-      },      {
-        "command": "elang-compiler.compile",
-        "title": "Compile Current File"
+        "command": "flow-wing-compile-and-run",
+        "title": "Compile and Run Current File"
       }
     ]
   },
