@@ -9,13 +9,34 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:flowwing"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "flow-wing-compile-and-run",
         "title": "Compile and Run Current File"
+      },
+      {
+        "command": "flow-wing.format",
+        "title": "Format Current File"
+      }
+    ],
+    "languages": [
+      {
+        "id": "flowwing",
+        "extensions": [
+          ".fg"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "flowwing",
+        "scopeName": "source.fg",
+        "path": "src/syntaxes/fg.tmLanguage.json"
       }
     ]
   },
